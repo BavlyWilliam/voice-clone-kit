@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Voice Clone Kit
 
 Clone a voice from a **1–2 minute recording**, then make it say **any text**, in a choice of **tones** and
@@ -163,3 +164,7 @@ OpenAI, MIT). Gradio: Apache-2.0. librosa: ISC. This kit's code: written for Bav
 | Arabic, neutral | 9.6 s | 0.93 | 100% |
 
 The demo files are in `output/`.
+=======
+# Voice-Clonning-project.
+Clone a voice from a 1–2 minute recording, then make it say any text, in a choice of tones and 23 languages. Everything runs on your own PC, for free: no account, no subscription, nothing uploaded.
+>>>>>>> cd8890d4f0faa7baf48fcdb416d143edbdc28b2b
