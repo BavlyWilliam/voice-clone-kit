@@ -1,0 +1,5 @@
+# PyTorch is installed first (setup.bat picks the CUDA build when an NVIDIA GPU is present):
+#   pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# chatterbox-tts brings librosa, soundfile, pyloudnorm, scipy, transformers, safetensors and gradio (the web app).
+chatterbox-tts==0.1.7
+faster-whisper==1.2.1

@@ -1,0 +1,5 @@
+# Personal data: voice profiles (recordings and clips) and generated audio stay on this PC.
+voices/
+output/
+*.log
+__pycache__/
