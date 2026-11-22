@@ -1,4 +1,3 @@
-
 # Voice Clone Kit
 
 Clone a voice from a **1–2 minute recording**, then make it say **any text**, in a choice of **tones** and
@@ -9,6 +8,9 @@ Clone a voice from a **1–2 minute recording**, then make it say **any text**, 
   like the voice and whether every word was said.
 
 It is built on the open-source **Chatterbox** models by Resemble AI (MIT licence) and grew out of the narration
+for the [Parla Italiano](https://bavlywilliam.github.io/Audio-Books-website/) A1 and A2 course audio: 22 units in
+the teacher's voice, cloned from his own recording with his permission.
+[Case study](https://bavlywilliam.github.io/Bavly-William-Portfolio/case-voice-kit.html).
 
 ---
 
@@ -21,8 +23,6 @@ Double-click **`setup.bat`**. It creates a Python environment at `%USERPROFILE%\
 because PyTorch's files break Windows' 260-character path limit in deep folders), installs PyTorch (the GPU build
 when it finds an NVIDIA card) and the models' code. The model weights download on first use (~3.2 GB for English,
 ~3.3 GB more for other languages) into `%USERPROFILE%\.cache\huggingface`.
-
-> On Bavly's PC this is already done (`C:\Users\ACER\voice-clone-env`, RTX 3060).
 
 ## 2. Use the app
 
@@ -38,7 +38,7 @@ Double-click **`start-app.bat`**. Your browser opens <http://127.0.0.1:7860> (on
 Open a terminal in this folder (or put it on your PATH) and use **`voiceclone.bat`**:
 
 ```bash
-voiceclone enroll bavly "..\Voice recoderings\Claude Video Script.m4a" --i-have-consent
+voiceclone enroll bavly "my recording.m4a" --i-have-consent
 voiceclone speak bavly "Hello, nice to meet you." --tone warm
 voiceclone speak bavly --file examples\script-example.txt --tone energetic --split --out output\ad.wav
 voiceclone speak bavly "Ciao, piacere di conoscerti." --language it
@@ -151,9 +151,9 @@ voice-clone-kit/
 ## Credits and licences
 
 Chatterbox TTS and the Perth watermarker: Resemble AI, MIT. PyTorch: BSD-3. faster-whisper: MIT (models by
-OpenAI, MIT). Gradio: Apache-2.0. librosa: ISC. This kit's code: written for Bavly William, free to reuse.
+OpenAI, MIT). Gradio: Apache-2.0. librosa: ISC. This kit's code: MIT licence, see [LICENSE](LICENSE).
 
-## Verified on this PC (21 Oct 2026, RTX 3060)
+## Tested results (21 Oct 2026, Windows 11, NVIDIA RTX 3060)
 
 | Test | Length | Sounds like the voice | Words correct |
 |---|---|---|---|
@@ -163,8 +163,4 @@ OpenAI, MIT). Gradio: Apache-2.0. librosa: ISC. This kit's code: written for Bav
 | Italian, warm | 7.8 s | 0.94 | 100% |
 | Arabic, neutral | 9.6 s | 0.93 | 100% |
 
-The demo files are in `output/`.
-=======
-# Voice-Clonning-project.
-Clone a voice from a 1–2 minute recording, then make it say any text, in a choice of tones and 23 languages. Everything runs on your own PC, for free: no account, no subscription, nothing uploaded.
->>>>>>> cd8890d4f0faa7baf48fcdb416d143edbdc28b2b
+The demo audio files stay on the test PC: `output/` is not committed, because it holds personal recordings.
